@@ -12,7 +12,7 @@
 5. [STEP 3](#STEP-3)
 
 ## 프로젝트 구현
-https://user-images.githubusercontent.com/98506825/168271500-8bd1af8e-e56d-4921-94f4-ee40d8d3b9c6.mov
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/98506825/168276705-7654cf5a-506d-4d8d-8127-8a2819dddd8d.gif)
 
 ## UML
 Class diagram
