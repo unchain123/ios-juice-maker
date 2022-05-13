@@ -11,7 +11,12 @@
 4. [STEP 2](#STEP-2)
 5. [STEP 3](#STEP-3)
 
-## 프로젝트 구현
+## 프로젝트 소개
+
+### 개발환경 및 라이브러리
+[![swift](https://img.shields.io/badge/swift-5.6-orange)]()
+[![xcode](https://img.shields.io/badge/Xcode-13.3-blue)]()
+
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/98506825/168276705-7654cf5a-506d-4d8d-8127-8a2819dddd8d.gif)
 
 ## UML
