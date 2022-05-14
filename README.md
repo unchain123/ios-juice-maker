@@ -5,7 +5,7 @@
 > 프로젝트 기간: 2022-04-25 ~ 2022-05-13
 > 팀원: [Kiwi](https://github.com/kiwi1023), [unchain123](https://github.com/unchain123) / 리뷰어: [HARIBO](https://github.com/HARlBO)
 ## 목차
-1. [프로젝트 구현](#프로젝트-구현)
+1. [프로젝트 소개](#프로젝트-소개)
 2. [UML](#UML)
 3. [STEP 1](#STEP-1)
 4. [STEP 2](#STEP-2)
