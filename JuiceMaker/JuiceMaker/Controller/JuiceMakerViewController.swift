@@ -8,11 +8,11 @@ import UIKit
 
 final class JuiceMakerViewController: UIViewController {
     
-    @IBOutlet weak var strawberryStockLable: UILabel!
-    @IBOutlet weak var bananaStockLable: UILabel!
-    @IBOutlet weak var pineappleStockLable: UILabel!
-    @IBOutlet weak var kiwiStockLable: UILabel!
-    @IBOutlet weak var mangoStockLable: UILabel!
+    @IBOutlet weak var strawberryStockLabel: UILabel!
+    @IBOutlet weak var bananaStockLabel: UILabel!
+    @IBOutlet weak var pineappleStockLabel: UILabel!
+    @IBOutlet weak var kiwiStockLabel: UILabel!
+    @IBOutlet weak var mangoStockLabel: UILabel!
     
     @IBOutlet weak var strawBerryBananJuiceButton: UIButton!
     @IBOutlet weak var mangoKiwiJuiceButton: UIButton!
@@ -27,6 +27,7 @@ final class JuiceMakerViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         updateViews()
+        self.navigationItem.accessibilityLabel = "My accessible label"
     }
     
     @IBAction private func didTapOrderJuice(_ sender: UIButton) {
@@ -34,7 +35,7 @@ final class JuiceMakerViewController: UIViewController {
             let order = try orderJuice(sender: sender)
             makeJuice(fruit: order)
             for (fruit, _) in order.recipe {
-                let stock = selectFruitLable(fruit: fruit)
+                let stock = selectFruitLabel(fruit: fruit)
                 stock.text = showFruitsStock(name: fruit)
             }
         } catch FruitStoreError.wrongMenu {
@@ -42,32 +43,42 @@ final class JuiceMakerViewController: UIViewController {
         } catch {
             print("")
         }
+        strawberryStockLabel.accessibilityLabel = "딸기의 남은 수량은 \(strawberryStockLabel.text!)개 입니다."
+        bananaStockLabel.accessibilityLabel = "바나나의 남은 수량은 \(bananaStockLabel.text!)개 입니다."
+        pineappleStockLabel.accessibilityLabel = "파인애플의 남은 수량은 \(pineappleStockLabel.text!)개 입니다."
+        kiwiStockLabel.accessibilityLabel = "키위의 남은 수량은 \(kiwiStockLabel.text!)개 입니다."
+        mangoStockLabel.accessibilityLabel = "망고의 남은 수량은 \(mangoStockLabel.text!)개 입니다."
     }
     
     private func updateViews() {
-        strawberryStockLable.text = showFruitsStock(name: .strawberry)
-        bananaStockLable.text = showFruitsStock(name: .banana)
-        pineappleStockLable.text = showFruitsStock(name: .pineapple)
-        kiwiStockLable.text = showFruitsStock(name: .kiwi)
-        mangoStockLable.text = showFruitsStock(name: .mango)
+        strawberryStockLabel.text = showFruitsStock(name: .strawberry)
+        bananaStockLabel.text = showFruitsStock(name: .banana)
+        pineappleStockLabel.text = showFruitsStock(name: .pineapple)
+        kiwiStockLabel.text = showFruitsStock(name: .kiwi)
+        mangoStockLabel.text = showFruitsStock(name: .mango)
+        strawberryStockLabel.accessibilityLabel = "딸기의 남은 수량은 \(strawberryStockLabel.text!)개 입니다."
+        bananaStockLabel.accessibilityLabel = "바나나의 남은 수량은 \(bananaStockLabel.text!)개 입니다."
+        pineappleStockLabel.accessibilityLabel = "파인애플의 남은 수량은 \(pineappleStockLabel.text!)개 입니다."
+        kiwiStockLabel.accessibilityLabel = "키위의 남은 수량은 \(kiwiStockLabel.text!)개 입니다."
+        mangoStockLabel.accessibilityLabel = "망고의 남은 수량은 \(mangoStockLabel.text!)개 입니다."
     }
     
     private func showFruitsStock(name: Fruit) -> String {
         return String(FruitStore.shared.showFruitsStock(name: name))
     }
     
-    private func selectFruitLable(fruit: Fruit) -> UILabel {
+    private func selectFruitLabel(fruit: Fruit) -> UILabel {
         switch fruit {
         case .strawberry:
-            return strawberryStockLable
+            return strawberryStockLabel
         case .mango:
-            return mangoStockLable
+            return mangoStockLabel
         case .kiwi:
-            return kiwiStockLable
+            return kiwiStockLabel
         case .pineapple:
-            return pineappleStockLable
+            return pineappleStockLabel
         case .banana:
-            return bananaStockLable
+            return bananaStockLabel
         }
     }
     

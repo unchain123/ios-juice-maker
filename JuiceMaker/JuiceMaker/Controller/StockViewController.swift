@@ -9,11 +9,11 @@ import UIKit
 
 final class StockViewController: UIViewController {
     
-    @IBOutlet weak var strawberryStockLable: UILabel!
-    @IBOutlet weak var bananaStockLable: UILabel!
-    @IBOutlet weak var pineappleStockLable: UILabel!
-    @IBOutlet weak var kiwiStockLable: UILabel!
-    @IBOutlet weak var mangoStockLable: UILabel!
+    @IBOutlet weak var strawberryStockLabel: UILabel!
+    @IBOutlet weak var bananaStockLabel: UILabel!
+    @IBOutlet weak var pineappleStockLabel: UILabel!
+    @IBOutlet weak var kiwiStockLabel: UILabel!
+    @IBOutlet weak var mangoStockLabel: UILabel!
     
     @IBOutlet weak var strawberryStepper: UIStepper!
     @IBOutlet weak var bananaStepper: UIStepper!
@@ -43,11 +43,11 @@ final class StockViewController: UIViewController {
     }
     
     private func setupViews() {
-        strawberryStockLable.text = showFruitsStock(name: .strawberry)
-        bananaStockLable.text = showFruitsStock(name: .banana)
-        pineappleStockLable.text = showFruitsStock(name: .pineapple)
-        kiwiStockLable.text = showFruitsStock(name: .kiwi)
-        mangoStockLable.text = showFruitsStock(name: .mango)
+        strawberryStockLabel.text = showFruitsStock(name: .strawberry)
+        bananaStockLabel.text = showFruitsStock(name: .banana)
+        pineappleStockLabel.text = showFruitsStock(name: .pineapple)
+        kiwiStockLabel.text = showFruitsStock(name: .kiwi)
+        mangoStockLabel.text = showFruitsStock(name: .mango)
     }
     
     private func showFruitsStock(name: Fruit) -> String {
@@ -94,23 +94,23 @@ final class StockViewController: UIViewController {
         mangoStepper.value = Double(FruitStore.shared.showFruitsStock(name: .mango))
     }
     
-    private func selectFruitLable(fruit: Fruit) -> UILabel {
+    private func selectFruitLabel(fruit: Fruit) -> UILabel {
         switch fruit {
         case .strawberry:
-            return strawberryStockLable
+            return strawberryStockLabel
         case .mango:
-            return mangoStockLable
+            return mangoStockLabel
         case .kiwi:
-            return kiwiStockLable
+            return kiwiStockLabel
         case .pineapple:
-            return pineappleStockLable
+            return pineappleStockLabel
         case .banana:
-            return bananaStockLable
+            return bananaStockLabel
         }
     }
     
     private func changeStock(fruit: Fruit) {
         FruitStore.shared.changeStock(fruit: fruit, newValue: Int(findFruitStepper(fruit: fruit).value))
-        selectFruitLable(fruit: fruit).text = showFruitsStock(name: fruit)
+        selectFruitLabel(fruit: fruit).text = showFruitsStock(name: fruit)
     }
 }
