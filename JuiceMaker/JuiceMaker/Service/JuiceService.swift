@@ -29,12 +29,12 @@ final class JuiceService: ObservableObject {
                                  .watermelon: 10,
                                  .mango: 10,
                                  .kiwi: 10],
-         juices: [Juice] = [Juice(name: "딸기 주스", recipe: Recipe(ingredient: [.strawberry: 5])),
-                            Juice(name: "사과 주스", recipe: Recipe(ingredient: [.apple: 3])),
-                            Juice(name: "바나나 주스", recipe: Recipe(ingredient: [.banana: 4])),
-                            Juice(name: "수박 주스", recipe: Recipe(ingredient: [.watermelon: 1])),
-                            Juice(name: "망고주스", recipe: Recipe(ingredient: [.mango: 6])),
-                            Juice(name: "키위주스", recipe: Recipe(ingredient: [.kiwi: 2]))]
+         juices: [Juice] = [Juice(name: "딸기 주스", recipe: Recipe(ingredient: [.strawberry: 5]), color: "strawberryPink"),
+                            Juice(name: "사과 주스", recipe: Recipe(ingredient: [.apple: 3]), color: "appleGreen"),
+                            Juice(name: "바나나 주스", recipe: Recipe(ingredient: [.banana: 4]), color: "bananaYellow"),
+                            Juice(name: "수박 주스", recipe: Recipe(ingredient: [.watermelon: 1]), color: "watermelonRed"),
+                            Juice(name: "망고주스", recipe: Recipe(ingredient: [.mango: 6]), color: "mangoYellow"),
+                            Juice(name: "키위주스", recipe: Recipe(ingredient: [.kiwi: 2]), color: "appleGreen")]
     ) {
         self.stock = stock
         self.juices = juices

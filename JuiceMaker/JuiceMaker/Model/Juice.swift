@@ -8,6 +8,13 @@
 import Foundation
 
 struct Juice {
-  let name: String
-  let recipe: Recipe
+    let name: String
+    let recipe: Recipe
+    let color: String
+
+    init(name: String, recipe: Recipe, color: String = "") {
+        self.name = name
+        self.recipe = recipe
+        self.color = color
+    }
 }

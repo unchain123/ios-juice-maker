@@ -13,7 +13,8 @@ struct MainView: View {
     var body: some View {
         VStack {
             Text("JuiceMaker")
-                .font(.largeTitle)
+                .font(Font.custom("BUJUAOTF", size: 36))
+
             VStack {
                 TabView(selection: $index) {
                     ForEach((0..<3), id: \.self) { index in
@@ -34,11 +35,15 @@ struct MainView: View {
 
 struct CardView: View {
     var body: some View {
-        Rectangle()
-            .fill(Color.yellow.opacity(0.9))
-            .frame(height: 400)
-            .cornerRadius(20.0)
-            .padding(EdgeInsets(top: 0, leading: 30, bottom: 0, trailing: 30))
+        ZStack {
+            Rectangle()
+                .fill(Color.yellow)
+                .frame(height: 400)
+                .cornerRadius(20.0)
+                .padding(EdgeInsets(top: 0, leading: 30, bottom: 0, trailing: 30))
+            JuiceCellView(juice: Juice(name: "딸기", recipe: .init(ingredient: [.kiwi: 3]), color: "watermelonRed"))
+                .frame(width: 300)
+        }
     }
 }
 
