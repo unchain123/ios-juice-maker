@@ -15,25 +15,27 @@ struct MainView: View {
         VStack {
             Text("JuiceMaker")
                 .font(Font.custom("BUJUAOTF", size: 36))
+                .padding(EdgeInsets(top: 5, leading: 0, bottom: 0, trailing: 0))
 
-            VStack {
-                TabView(selection: $selected) {
-                    ForEach($viewModel.juices.indices, id: \.self) { index in
-                        CardView(juice: $viewModel.juices[index])
-                            .tag(index)
-                    }
+            Spacer()
+
+            TabView(selection: $selected) {
+                ForEach($viewModel.juices.indices, id: \.self) { index in
+                    CardView(juice: $viewModel.juices[index])
+                        .tag(index)
                 }
-                .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
-                .indexViewStyle(.page)
             }
+            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
+            .indexViewStyle(.page)
             .frame(height: 400)
             MakeButtonView(viewModel: viewModel, selected: $selected)
                 .alert("\(viewModel.juiceType) 나왔습니다!", isPresented: $viewModel.isAlert, actions: {
                     Button("잘 먹겠습니다", role: .none) {}
                 })
                 .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0))
-            StorageView()
+            StorageButtonView()
                 .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0))
+            Spacer()
         }
     }
 }
@@ -79,9 +81,13 @@ struct MakeButtonView: View {
     }
 }
 
-struct StorageView: View {
+struct StorageButtonView: View {
+    @State var isActive: Bool = false
+
     var body: some View {
-        Button(action: {}) {
+        Button(action: {
+            isActive.toggle()
+        }) {
             ZStack {
                 Rectangle()
                     .fill(Color.yellow)
@@ -91,6 +97,9 @@ struct StorageView: View {
                 Text("과일창고")
                     .font(.caption)
                     .foregroundColor(Color.black)
+                    .fullScreenCover(isPresented: $isActive) {
+                        StorageView(isActive: $isActive)
+                    }
             }
         }
     }
