@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol JuiceServieProtocol {
+protocol JuiceServiceProtocol {
     var stock: [Fruit: Int] { get }
     var juices: [Juice] { get }
 
@@ -19,7 +19,7 @@ protocol JuiceServieProtocol {
     func isEnoughStock(juice: Juice) -> Bool
 }
 
-final class JuiceService: ObservableObject {
+final class JuiceService: ObservableObject, JuiceServiceProtocol {
     @Published var stock: [Fruit: Int]
     @Published var juices: [Juice]
 

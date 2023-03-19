@@ -7,7 +7,11 @@
 
 import Foundation
 
-class Recipe {
+final class Recipe {
+    static func == (lhs: Recipe, rhs: Recipe) -> Bool {
+        return lhs.ingredient == rhs.ingredient
+    }
+
   init(ingredient: [Fruit : Int]) {
     self.ingredient = ingredient
   }

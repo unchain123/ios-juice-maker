@@ -14,7 +14,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
             window.rootViewController = UIHostingController(
-                rootView: MainView()
+                rootView: MainView(viewModel: MainViewModel(service: JuiceService()))
             )
             self.window = window
             window.makeKeyAndVisible()

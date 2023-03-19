@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct MainView: View {
-    @State private var index = 0
+    @StateObject var viewModel: MainViewModel
+    @State var selected: Int = 0
 
     var body: some View {
         VStack {
@@ -16,16 +17,20 @@ struct MainView: View {
                 .font(Font.custom("BUJUAOTF", size: 36))
 
             VStack {
-                TabView(selection: $index) {
-                    ForEach((0..<3), id: \.self) { index in
-                        CardView()
+                TabView(selection: $selected) {
+                    ForEach($viewModel.juices.indices, id: \.self) { index in
+                        CardView(juice: $viewModel.juices[index])
+                            .tag(index)
                     }
                 }
                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
                 .indexViewStyle(.page)
             }
             .frame(height: 400)
-            MakeButtonView()
+            MakeButtonView(viewModel: viewModel, selected: $selected)
+                .alert("\(viewModel.juiceType) 나왔습니다!", isPresented: $viewModel.isAlert, actions: {
+                    Button("잘 먹겠습니다", role: .none) {}
+                })
                 .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0))
             StorageView()
                 .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0))
@@ -34,6 +39,8 @@ struct MainView: View {
 }
 
 struct CardView: View {
+    @Binding var juice: Juice
+
     var body: some View {
         ZStack {
             Rectangle()
@@ -41,15 +48,20 @@ struct CardView: View {
                 .frame(height: 400)
                 .cornerRadius(20.0)
                 .padding(EdgeInsets(top: 0, leading: 30, bottom: 0, trailing: 30))
-            JuiceCellView(juice: Juice(name: "딸기", recipe: .init(ingredient: [.kiwi: 3]), color: "watermelonRed"))
+            JuiceCellView(juice: juice)
                 .frame(width: 300)
         }
     }
 }
 
 struct MakeButtonView: View {
+    @ObservedObject var viewModel: MainViewModel
+    @Binding var selected: Int
+
     var body: some View {
-        Button(action: {}) {
+        Button(action: {
+            viewModel.tappedMakeButton(selected: selected)
+        }) {
             ZStack {
                 Rectangle()
                     .fill(Color.yellow)
@@ -86,7 +98,7 @@ struct StorageView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        MainView(viewModel: MainViewModel(service: JuiceService()))
     }
 }
 

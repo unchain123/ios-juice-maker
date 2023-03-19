@@ -7,8 +7,10 @@
 
 import Foundation
 
-struct Juice {
-    let name: String
+struct Juice: Identifiable {
+    let id = UUID()
+
+    var name: String
     let recipe: Recipe
     let color: String
 
