@@ -11,6 +11,8 @@
 		8F22F0AD29C7E329000D077B /* JuiceMakerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F22F0AC29C7E329000D077B /* JuiceMakerApp.swift */; };
 		8F22F0B029C7EE6E000D077B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F22F0AF29C7EE6E000D077B /* ContentView.swift */; };
 		8F22F0B229C815F1000D077B /* JuiceMenuViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F22F0B129C815F1000D077B /* JuiceMenuViewModelTest.swift */; };
+		8F22F0B429C824AE000D077B /* StorageViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F22F0B329C824AE000D077B /* StorageViewModelTest.swift */; };
+		8F22F0B629C825E0000D077B /* StockControlViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F22F0B529C825E0000D077B /* StockControlViewModelTest.swift */; };
 		8F6A9B8728180D9300FCB772 /* FruitStoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6A9B8628180D9300FCB772 /* FruitStoreError.swift */; };
 		8F6A9B8928180E7600FCB772 /* Juice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6A9B8828180E7600FCB772 /* Juice.swift */; };
 		8F7E491329C4010900D259DF /* JuiceMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7E491229C4010900D259DF /* JuiceMenuView.swift */; };
@@ -22,6 +24,8 @@
 		8F7E495329C6CEC400D259DF /* StorageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7E495229C6CEC400D259DF /* StorageViewModel.swift */; };
 		8F7E495629C6E87D00D259DF /* StockContolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7E495529C6E87D00D259DF /* StockContolView.swift */; };
 		8F7E495929C6E8C700D259DF /* StockControlViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7E495829C6E8C700D259DF /* StockControlViewModel.swift */; };
+		8FDAEF3929C82A84003215E2 /* JuiceMakerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDAEF3829C82A84003215E2 /* JuiceMakerUITests.swift */; };
+		8FDAEF3B29C82A84003215E2 /* JuiceMakerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDAEF3A29C82A84003215E2 /* JuiceMakerUITestsLaunchTests.swift */; };
 		C71CD66B266C7ACB0038B9CB /* JuiceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71CD66A266C7ACB0038B9CB /* JuiceService.swift */; };
 		C73DAF40255D0CDE00020D38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C73DAF3F255D0CDE00020D38 /* Assets.xcassets */; };
 		C73DAF43255D0CDF00020D38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C73DAF41255D0CDF00020D38 /* LaunchScreen.storyboard */; };
@@ -35,6 +39,13 @@
 			remoteGlobalIDString = C73DAF32255D0CDC00020D38;
 			remoteInfo = JuiceMaker;
 		};
+		8FDAEF3C29C82A84003215E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C73DAF2B255D0CDC00020D38 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C73DAF32255D0CDC00020D38;
+			remoteInfo = JuiceMaker;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +53,9 @@
 		8F22F0AC29C7E329000D077B /* JuiceMakerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuiceMakerApp.swift; sourceTree = "<group>"; };
 		8F22F0AF29C7EE6E000D077B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8F22F0B129C815F1000D077B /* JuiceMenuViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuiceMenuViewModelTest.swift; sourceTree = "<group>"; };
+		8F22F0B329C824AE000D077B /* StorageViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageViewModelTest.swift; sourceTree = "<group>"; };
+		8F22F0B529C825E0000D077B /* StockControlViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockControlViewModelTest.swift; sourceTree = "<group>"; };
+		8F22F0BD29C827DB000D077B /* JuiceMakerUItests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JuiceMakerUItests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F6A9B8628180D9300FCB772 /* FruitStoreError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitStoreError.swift; sourceTree = "<group>"; };
 		8F6A9B8828180E7600FCB772 /* Juice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Juice.swift; sourceTree = "<group>"; };
 		8F7E491229C4010900D259DF /* JuiceMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuiceMenuView.swift; sourceTree = "<group>"; };
@@ -56,6 +70,9 @@
 		8F7E495229C6CEC400D259DF /* StorageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageViewModel.swift; sourceTree = "<group>"; };
 		8F7E495529C6E87D00D259DF /* StockContolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockContolView.swift; sourceTree = "<group>"; };
 		8F7E495829C6E8C700D259DF /* StockControlViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockControlViewModel.swift; sourceTree = "<group>"; };
+		8FDAEF3629C82A84003215E2 /* JuiceMakerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JuiceMakerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FDAEF3829C82A84003215E2 /* JuiceMakerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuiceMakerUITests.swift; sourceTree = "<group>"; };
+		8FDAEF3A29C82A84003215E2 /* JuiceMakerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuiceMakerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C71CD66A266C7ACB0038B9CB /* JuiceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuiceService.swift; sourceTree = "<group>"; };
 		C73DAF33255D0CDD00020D38 /* JuiceMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JuiceMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C73DAF3F255D0CDE00020D38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -64,7 +81,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8F22F0BA29C827DB000D077B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8F7E493D29C4433700D259DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FDAEF3329C82A84003215E2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -148,6 +179,8 @@
 			children = (
 				8F7E494229C4433800D259DF /* JuiceServiceTests.swift */,
 				8F22F0B129C815F1000D077B /* JuiceMenuViewModelTest.swift */,
+				8F22F0B329C824AE000D077B /* StorageViewModelTest.swift */,
+				8F22F0B529C825E0000D077B /* StockControlViewModelTest.swift */,
 			);
 			path = JuiceServiceTests;
 			sourceTree = "<group>";
@@ -196,6 +229,15 @@
 			path = Component;
 			sourceTree = "<group>";
 		};
+		8FDAEF3729C82A84003215E2 /* JuiceMakerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8FDAEF3829C82A84003215E2 /* JuiceMakerUITests.swift */,
+				8FDAEF3A29C82A84003215E2 /* JuiceMakerUITestsLaunchTests.swift */,
+			);
+			path = JuiceMakerUITests;
+			sourceTree = "<group>";
+		};
 		C71CD66F266C7B500038B9CB /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +263,7 @@
 				C73DAF35255D0CDD00020D38 /* JuiceMaker */,
 				8F7E494B29C4BF8900D259DF /* Font */,
 				8F7E494129C4433800D259DF /* JuiceServiceTests */,
+				8FDAEF3729C82A84003215E2 /* JuiceMakerUITests */,
 				C73DAF34255D0CDD00020D38 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -230,6 +273,8 @@
 			children = (
 				C73DAF33255D0CDD00020D38 /* JuiceMaker.app */,
 				8F7E494029C4433700D259DF /* JuiceServiceTests.xctest */,
+				8F22F0BD29C827DB000D077B /* JuiceMakerUItests.xctest */,
+				8FDAEF3629C82A84003215E2 /* JuiceMakerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -249,6 +294,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8F22F0BC29C827DB000D077B /* JuiceMakerUItests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F22F0C329C827DB000D077B /* Build configuration list for PBXNativeTarget "JuiceMakerUItests" */;
+			buildPhases = (
+				8F22F0B929C827DB000D077B /* Sources */,
+				8F22F0BA29C827DB000D077B /* Frameworks */,
+				8F22F0BB29C827DB000D077B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JuiceMakerUItests;
+			productName = JuiceMakerUItests;
+			productReference = 8F22F0BD29C827DB000D077B /* JuiceMakerUItests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		8F7E493F29C4433700D259DF /* JuiceServiceTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F7E494629C4433800D259DF /* Build configuration list for PBXNativeTarget "JuiceServiceTests" */;
@@ -266,6 +328,24 @@
 			productName = JuiceServiceTests;
 			productReference = 8F7E494029C4433700D259DF /* JuiceServiceTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8FDAEF3529C82A84003215E2 /* JuiceMakerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FDAEF3E29C82A84003215E2 /* Build configuration list for PBXNativeTarget "JuiceMakerUITests" */;
+			buildPhases = (
+				8FDAEF3229C82A84003215E2 /* Sources */,
+				8FDAEF3329C82A84003215E2 /* Frameworks */,
+				8FDAEF3429C82A84003215E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8FDAEF3D29C82A84003215E2 /* PBXTargetDependency */,
+			);
+			name = JuiceMakerUITests;
+			productName = JuiceMakerUITests;
+			productReference = 8FDAEF3629C82A84003215E2 /* JuiceMakerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 		C73DAF32255D0CDC00020D38 /* JuiceMaker */ = {
 			isa = PBXNativeTarget;
@@ -293,7 +373,14 @@
 				LastSwiftUpdateCheck = 1410;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
+					8F22F0BC29C827DB000D077B = {
+						CreatedOnToolsVersion = 14.1;
+					};
 					8F7E493F29C4433700D259DF = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = C73DAF32255D0CDC00020D38;
+					};
+					8FDAEF3529C82A84003215E2 = {
 						CreatedOnToolsVersion = 14.1;
 						TestTargetID = C73DAF32255D0CDC00020D38;
 					};
@@ -317,12 +404,28 @@
 			targets = (
 				C73DAF32255D0CDC00020D38 /* JuiceMaker */,
 				8F7E493F29C4433700D259DF /* JuiceServiceTests */,
+				8F22F0BC29C827DB000D077B /* JuiceMakerUItests */,
+				8FDAEF3529C82A84003215E2 /* JuiceMakerUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8F22F0BB29C827DB000D077B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8F7E493E29C4433700D259DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FDAEF3429C82A84003215E2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -341,12 +444,30 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8F22F0B929C827DB000D077B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8F7E493C29C4433700D259DF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F22F0B429C824AE000D077B /* StorageViewModelTest.swift in Sources */,
 				8F22F0B229C815F1000D077B /* JuiceMenuViewModelTest.swift in Sources */,
 				8F7E494329C4433800D259DF /* JuiceServiceTests.swift in Sources */,
+				8F22F0B629C825E0000D077B /* StockControlViewModelTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FDAEF3229C82A84003215E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FDAEF3B29C82A84003215E2 /* JuiceMakerUITestsLaunchTests.swift in Sources */,
+				8FDAEF3929C82A84003215E2 /* JuiceMakerUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +500,11 @@
 			target = C73DAF32255D0CDC00020D38 /* JuiceMaker */;
 			targetProxy = 8F7E494429C4433800D259DF /* PBXContainerItemProxy */;
 		};
+		8FDAEF3D29C82A84003215E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C73DAF32255D0CDC00020D38 /* JuiceMaker */;
+			targetProxy = 8FDAEF3C29C82A84003215E2 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -393,6 +519,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		8F22F0C429C827DB000D077B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QW8FL6CWBT;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = unchain.JuiceMakerUItests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		8F22F0C529C827DB000D077B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QW8FL6CWBT;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = unchain.JuiceMakerUItests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		8F7E494729C4433800D259DF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -436,6 +598,44 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JuiceMaker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/JuiceMaker";
+			};
+			name = Release;
+		};
+		8FDAEF3F29C82A84003215E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QW8FL6CWBT;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = unchain.JuiceMakerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JuiceMaker;
+			};
+			name = Debug;
+		};
+		8FDAEF4029C82A84003215E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QW8FL6CWBT;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = unchain.JuiceMakerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JuiceMaker;
 			};
 			name = Release;
 		};
@@ -596,11 +796,29 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8F22F0C329C827DB000D077B /* Build configuration list for PBXNativeTarget "JuiceMakerUItests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F22F0C429C827DB000D077B /* Debug */,
+				8F22F0C529C827DB000D077B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8F7E494629C4433800D259DF /* Build configuration list for PBXNativeTarget "JuiceServiceTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8F7E494729C4433800D259DF /* Debug */,
 				8F7E494829C4433800D259DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8FDAEF3E29C82A84003215E2 /* Build configuration list for PBXNativeTarget "JuiceMakerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FDAEF3F29C82A84003215E2 /* Debug */,
+				8FDAEF4029C82A84003215E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
