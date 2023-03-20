@@ -69,6 +69,6 @@ struct StorageView: View {
 
 struct ContentView_Previews2: PreviewProvider {
     static var previews: some View {
-        JuiceMenuView(viewModel: MainViewModel(service: JuiceService(), viewRouter: ViewRouter()), viewRoter: ViewRouter())
+        JuiceMenuView(viewModel: JuiceViewModel(service: JuiceService(), viewRouter: ViewRouter()), viewRoter: ViewRouter())
     }
 }

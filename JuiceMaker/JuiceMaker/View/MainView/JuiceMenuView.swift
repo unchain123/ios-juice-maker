@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct JuiceMenuView: View {
-    @ObservedObject var viewModel: MainViewModel
+    @ObservedObject var viewModel: JuiceViewModel
     @State var selected: Int = 0
     @ObservedObject var viewRoter: ViewRouter
 
@@ -55,7 +55,7 @@ struct CardView: View {
 }
 
 struct MakeButtonView: View {
-    @ObservedObject var viewModel: MainViewModel
+    @ObservedObject var viewModel: JuiceViewModel
     @ObservedObject var viewRouter: ViewRouter
     @Binding var selected: Int
     @State var isNotEnough = false
@@ -99,7 +99,7 @@ struct MakeButtonView: View {
 }
 
 struct StorageButtonView: View {
-    @ObservedObject var viewModel: MainViewModel
+    @ObservedObject var viewModel: JuiceViewModel
     @ObservedObject var viewRouter: ViewRouter
 
     var body: some View {
@@ -122,6 +122,6 @@ struct StorageButtonView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        JuiceMenuView(viewModel: MainViewModel(service: JuiceService(), viewRouter: ViewRouter()), viewRoter: ViewRouter())
+        JuiceMenuView(viewModel: JuiceViewModel(service: JuiceService(), viewRouter: ViewRouter()), viewRoter: ViewRouter())
     }
 }

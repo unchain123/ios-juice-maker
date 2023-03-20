@@ -16,7 +16,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             if viewRouter.currentPage == "JuiceMenuView" {
-                let juiceMenuViewModel = MainViewModel(service: service, viewRouter: viewRouter)
+                let juiceMenuViewModel = JuiceViewModel(service: service, viewRouter: viewRouter)
                 
                 JuiceMenuView(viewModel: juiceMenuViewModel, viewRoter: viewRouter)
                     .alert("\(viewRouter.juice.name) 나왔습니다! "
