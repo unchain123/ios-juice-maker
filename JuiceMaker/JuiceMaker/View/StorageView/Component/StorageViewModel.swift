@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 final class StorageViewModel: ObservableObject {
-    var service: JuiceServiceProtocol
+    private var service: JuiceServiceProtocol
     @Published var juiceStock: [Fruit : Int]
     var childrenVieModel: [Fruit : StockControlViewModel]
     private var cancelable = Set<AnyCancellable>()

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MainView: View {
+struct JuiceMenuView: View {
     @ObservedObject var viewModel: MainViewModel
     @State var selected: Int = 0
     @ObservedObject var viewRoter: ViewRouter
@@ -29,7 +29,7 @@ struct MainView: View {
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
             .indexViewStyle(.page)
             .frame(height: 400)
-            MakeButtonView(viewModel: viewModel, selected: $selected)
+            MakeButtonView(viewModel: viewModel, viewRouter: viewRoter, selected: $selected)
                 .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0))
             StorageButtonView(viewModel: viewModel, viewRouter: viewRoter)
                 .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0))
@@ -56,11 +56,19 @@ struct CardView: View {
 
 struct MakeButtonView: View {
     @ObservedObject var viewModel: MainViewModel
+    @ObservedObject var viewRouter: ViewRouter
     @Binding var selected: Int
+    @State var isNotEnough = false
 
     var body: some View {
         Button(action: {
-            viewModel.tappedMakeButton(selected: selected)
+            if viewModel.isEnough(fruit: selected) {
+                viewModel.tappedMakeButton(selected: selected)
+                isNotEnough = false
+            } else {
+                isNotEnough.toggle()
+                viewRouter.isShowSuccessAlert = false
+            }
         }) {
             ZStack {
                 Rectangle()
@@ -72,8 +80,19 @@ struct MakeButtonView: View {
                     .fill(Color.white)
                     .frame(width: 90, height: 50)
                     .cornerRadius(5)
-                Text("만들기")
+                Text(viewModel.isEnough(fruit: selected) ? "만들기" : "재고없음")
                     .foregroundColor(Color.black)
+            }
+            .alert("재고가 부족합니다.\n 창고로 가시겠습니까?", isPresented: $isNotEnough) {
+                HStack {
+                    Button("네", role: .none) {
+                        viewRouter.currentPage = "StorageView"
+                    }
+
+                    Button("아니요", role: .none) {
+
+                    }
+                }
             }
         }
     }
@@ -103,6 +122,6 @@ struct StorageButtonView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView(viewModel: MainViewModel(service: JuiceService(), viewRouter: ViewRouter()), viewRoter: ViewRouter())
+        JuiceMenuView(viewModel: MainViewModel(service: JuiceService(), viewRouter: ViewRouter()), viewRoter: ViewRouter())
     }
 }

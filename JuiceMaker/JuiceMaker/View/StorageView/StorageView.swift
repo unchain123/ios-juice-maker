@@ -10,6 +10,7 @@ import SwiftUI
 struct StorageView: View {
     var viewModel: StorageViewModel
     @ObservedObject var viewRouter: ViewRouter
+
     var body: some View {
         VStack {
             HStack {
@@ -68,6 +69,6 @@ struct StorageView: View {
 
 struct ContentView_Previews2: PreviewProvider {
     static var previews: some View {
-        MainView(viewModel: MainViewModel(service: JuiceService(), viewRouter: ViewRouter()), viewRoter: ViewRouter())
+        JuiceMenuView(viewModel: MainViewModel(service: JuiceService(), viewRouter: ViewRouter()), viewRoter: ViewRouter())
     }
 }

@@ -10,7 +10,7 @@ import Foundation
 protocol JuiceServiceProtocol {
     var stock: [Fruit: Int] { get }
     var juices: [Juice] { get }
-
+    
     func plusStock(fruit: Fruit)
     func minusStock(fruit: Fruit)
     func addNewJuice(_ juice: Juice)
@@ -22,7 +22,7 @@ protocol JuiceServiceProtocol {
 final class JuiceService: ObservableObject, JuiceServiceProtocol {
     @Published var stock: [Fruit: Int]
     @Published var juices: [Juice]
-
+    
     init(stock: [Fruit : Int] = [.strawberry: 10,
                                  .apple: 10,
                                  .banana: 10,
@@ -39,44 +39,44 @@ final class JuiceService: ObservableObject, JuiceServiceProtocol {
         self.stock = stock
         self.juices = juices
     }
-
+    
     func plusStock(fruit: Fruit) {
         guard let count = stock[fruit] else { return }
         stock[fruit] = count + 1
     }
-
+    
     func minusStock(fruit: Fruit) {
         guard let count = stock[fruit] else { return }
         stock[fruit] = count - 1
     }
-
+    
     func addNewJuice(_ juice: Juice) {
         juices.append(juice)
     }
-
+    
     func makeJuice(_ juice: Juice) -> Result<Juice, MakeJuiceError> {
-
+        
         for ingredient in juice.recipe.ingredient {
             guard let count = stock[ingredient.key] else {
                 return .failure(.wrongFruit)
             }
-
+            
             if count < ingredient.value {
                 return .failure(.outOfStock)
             }
-
+            
             stock[ingredient.key] = count - ingredient.value
         }
         return .success(juice)
     }
-
+    
     func changeStock(_ newStock: [Fruit: Int]) {
         self.stock = newStock
     }
-
+    
     func isEnoughStock(juice: Juice) -> Bool {
         var isEnough: Bool = true
-
+        
         for (fruit, amount) in juice.recipe.ingredient {
             if isEnough {
                 isEnough = stock[fruit] ?? 0 >= amount

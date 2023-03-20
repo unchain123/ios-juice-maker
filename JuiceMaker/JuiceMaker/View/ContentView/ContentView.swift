@@ -18,11 +18,10 @@ struct ContentView: View {
             if viewRouter.currentPage == "JuiceMenuView" {
                 let juiceMenuViewModel = MainViewModel(service: service, viewRouter: viewRouter)
                 
-                MainView(viewModel: juiceMenuViewModel, viewRoter: viewRouter)
+                JuiceMenuView(viewModel: juiceMenuViewModel, viewRoter: viewRouter)
                     .alert("\(viewRouter.juice.name) 나왔습니다! "
                            , isPresented: $viewRouter.isShowSuccessAlert) {
-                        Button("잘 먹겠습니다.", role: .none) {
-                        }
+                        Button("잘 먹겠습니다.", role: .none) { }
                     }
                 
             } else if viewRouter.currentPage == "StorageView" {
@@ -33,22 +32,22 @@ struct ContentView: View {
     }
 }
 
-    struct ContentViews_Previews: PreviewProvider {
-        static var previews: some View {
-            ContentView(viewRouter: ViewRouter(), service: JuiceService())
+struct ContentViews_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView(viewRouter: ViewRouter(), service: JuiceService())
+    }
+}
+
+class ViewRouter : ObservableObject{
+    @Published var isShowSuccessAlert: Bool = false
+    @Published var juice: Juice = Juice(name: "잘못된 주스", recipe: Recipe(ingredient: [.strawberry: 10]), color: "strawberryPink")
+
+    let objectWillChange = PassthroughSubject<ViewRouter,Never>()
+
+    var currentPage: String = "JuiceMenuView" {
+        didSet{
+            objectWillChange.send(self)
         }
     }
-    
-    class ViewRouter : ObservableObject{
-        @Published var isShowSuccessAlert: Bool = false
-        @Published var juice: Juice = Juice(name: "잘못된 주스", recipe: Recipe(ingredient: [.strawberry: 10]), color: "strawberryPink")
-        
-        let objectWillChange = PassthroughSubject<ViewRouter,Never>()
-        
-        var currentPage: String = "JuiceMenuView" {
-            didSet{
-                objectWillChange.send(self)
-            }
-        }
-    }
+}
 

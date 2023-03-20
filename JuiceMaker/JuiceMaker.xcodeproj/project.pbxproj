@@ -12,7 +12,7 @@
 		8F22F0B029C7EE6E000D077B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F22F0AF29C7EE6E000D077B /* ContentView.swift */; };
 		8F6A9B8728180D9300FCB772 /* FruitStoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6A9B8628180D9300FCB772 /* FruitStoreError.swift */; };
 		8F6A9B8928180E7600FCB772 /* Juice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6A9B8828180E7600FCB772 /* Juice.swift */; };
-		8F7E491329C4010900D259DF /* SwiftUIMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7E491229C4010900D259DF /* SwiftUIMainView.swift */; };
+		8F7E491329C4010900D259DF /* JuiceMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7E491229C4010900D259DF /* JuiceMenuView.swift */; };
 		8F7E493829C423F800D259DF /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7E493729C423F800D259DF /* MainViewModel.swift */; };
 		8F7E493B29C4261800D259DF /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7E493A29C4261800D259DF /* Recipe.swift */; };
 		8F7E494329C4433800D259DF /* JuiceServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7E494229C4433800D259DF /* JuiceServiceTests.swift */; };
@@ -22,8 +22,6 @@
 		8F7E495629C6E87D00D259DF /* StockContolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7E495529C6E87D00D259DF /* StockContolView.swift */; };
 		8F7E495929C6E8C700D259DF /* StockControlViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7E495829C6E8C700D259DF /* StockControlViewModel.swift */; };
 		C71CD66B266C7ACB0038B9CB /* JuiceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71CD66A266C7ACB0038B9CB /* JuiceService.swift */; };
-		C73DAF37255D0CDD00020D38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73DAF36255D0CDD00020D38 /* AppDelegate.swift */; };
-		C73DAF39255D0CDD00020D38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73DAF38255D0CDD00020D38 /* SceneDelegate.swift */; };
 		C73DAF40255D0CDE00020D38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C73DAF3F255D0CDE00020D38 /* Assets.xcassets */; };
 		C73DAF43255D0CDF00020D38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C73DAF41255D0CDF00020D38 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -44,7 +42,7 @@
 		8F22F0AF29C7EE6E000D077B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8F6A9B8628180D9300FCB772 /* FruitStoreError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitStoreError.swift; sourceTree = "<group>"; };
 		8F6A9B8828180E7600FCB772 /* Juice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Juice.swift; sourceTree = "<group>"; };
-		8F7E491229C4010900D259DF /* SwiftUIMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIMainView.swift; sourceTree = "<group>"; };
+		8F7E491229C4010900D259DF /* JuiceMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuiceMenuView.swift; sourceTree = "<group>"; };
 		8F7E493729C423F800D259DF /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewModel.swift; path = ../../../../../../MainViewModel.swift; sourceTree = "<group>"; };
 		8F7E493A29C4261800D259DF /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		8F7E494029C4433700D259DF /* JuiceServiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JuiceServiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,8 +56,6 @@
 		8F7E495829C6E8C700D259DF /* StockControlViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockControlViewModel.swift; sourceTree = "<group>"; };
 		C71CD66A266C7ACB0038B9CB /* JuiceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuiceService.swift; sourceTree = "<group>"; };
 		C73DAF33255D0CDD00020D38 /* JuiceMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JuiceMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C73DAF36255D0CDD00020D38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C73DAF38255D0CDD00020D38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C73DAF3F255D0CDE00020D38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C73DAF42255D0CDF00020D38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C73DAF44255D0CDF00020D38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -104,8 +100,6 @@
 		8F7E493029C40C5E00D259DF /* Entries */ = {
 			isa = PBXGroup;
 			children = (
-				C73DAF38255D0CDD00020D38 /* SceneDelegate.swift */,
-				C73DAF36255D0CDD00020D38 /* AppDelegate.swift */,
 				8F22F0AC29C7E329000D077B /* JuiceMakerApp.swift */,
 			);
 			path = Entries;
@@ -131,7 +125,7 @@
 		8F7E493529C423A100D259DF /* MainView */ = {
 			isa = PBXGroup;
 			children = (
-				8F7E491229C4010900D259DF /* SwiftUIMainView.swift */,
+				8F7E491229C4010900D259DF /* JuiceMenuView.swift */,
 				8F7E494929C4A38B00D259DF /* JuiceView.swift */,
 				8F7E493229C40D3F00D259DF /* Component */,
 			);
@@ -365,11 +359,9 @@
 				4D438928281809D1004E2BA2 /* Fruit.swift in Sources */,
 				8F7E495329C6CEC400D259DF /* StorageViewModel.swift in Sources */,
 				8F6A9B8728180D9300FCB772 /* FruitStoreError.swift in Sources */,
-				C73DAF37255D0CDD00020D38 /* AppDelegate.swift in Sources */,
-				C73DAF39255D0CDD00020D38 /* SceneDelegate.swift in Sources */,
 				8F6A9B8928180E7600FCB772 /* Juice.swift in Sources */,
 				8F7E494A29C4A38B00D259DF /* JuiceView.swift in Sources */,
-				8F7E491329C4010900D259DF /* SwiftUIMainView.swift in Sources */,
+				8F7E491329C4010900D259DF /* JuiceMenuView.swift in Sources */,
 				8F7E493829C423F800D259DF /* MainViewModel.swift in Sources */,
 				8F7E495629C6E87D00D259DF /* StockContolView.swift in Sources */,
 			);
