@@ -8,16 +8,15 @@
 import SwiftUI
 
 struct StorageView: View {
-    @ObservedObject var viewModel: StorageViewModel
-    @Binding var isActive: Bool
-
+    var viewModel: StorageViewModel
+    @ObservedObject var viewRouter: ViewRouter
     var body: some View {
         VStack {
             HStack {
                 Spacer()
 
                 Button(action: {
-                    isActive.toggle()
+                    viewRouter.currentPage = "JuiceMenuView"
                 }) {
                     ZStack {
                         RoundedRectangle(cornerRadius: 10)
@@ -37,6 +36,7 @@ struct StorageView: View {
                 Spacer()
                 Button(action: {
                     viewModel.saveStock()
+                    viewRouter.currentPage = "JuiceMenuView"
                 }) {
                     ZStack {
                         RoundedRectangle(cornerRadius: 10)
@@ -68,6 +68,6 @@ struct StorageView: View {
 
 struct ContentView_Previews2: PreviewProvider {
     static var previews: some View {
-        MainView(viewModel: MainViewModel(service: JuiceService()))
+        MainView(viewModel: MainViewModel(service: JuiceService(), viewRouter: ViewRouter()), viewRoter: ViewRouter())
     }
 }

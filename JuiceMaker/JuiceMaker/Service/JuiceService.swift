@@ -71,7 +71,7 @@ final class JuiceService: ObservableObject, JuiceServiceProtocol {
     }
 
     func changeStock(_ newStock: [Fruit: Int]) {
-        self.stock = stock
+        self.stock = newStock
     }
 
     func isEnoughStock(juice: Juice) -> Bool {

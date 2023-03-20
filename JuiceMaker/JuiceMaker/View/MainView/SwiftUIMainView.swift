@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct MainView: View {
-    @StateObject var viewModel: MainViewModel
+    @ObservedObject var viewModel: MainViewModel
     @State var selected: Int = 0
+    @ObservedObject var viewRoter: ViewRouter
 
     var body: some View {
         VStack {
@@ -29,11 +30,8 @@ struct MainView: View {
             .indexViewStyle(.page)
             .frame(height: 400)
             MakeButtonView(viewModel: viewModel, selected: $selected)
-                .alert("\(viewModel.juices[selected].name) 나왔습니다!", isPresented: $viewModel.isAlert, actions: {
-                    Button("잘 먹겠습니다", role: .none) {}
-                })
                 .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0))
-            StorageButtonView(viewModel: viewModel)
+            StorageButtonView(viewModel: viewModel, viewRouter: viewRoter)
                 .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0))
             Spacer()
         }
@@ -83,11 +81,11 @@ struct MakeButtonView: View {
 
 struct StorageButtonView: View {
     @ObservedObject var viewModel: MainViewModel
-    @State var isActive: Bool = false
+    @ObservedObject var viewRouter: ViewRouter
 
     var body: some View {
         Button(action: {
-            isActive.toggle()
+            viewRouter.currentPage = "StorageView"
         }) {
             ZStack {
                 Rectangle()
@@ -98,9 +96,6 @@ struct StorageButtonView: View {
                 Text("과일창고")
                     .font(.caption)
                     .foregroundColor(Color.black)
-                    .fullScreenCover(isPresented: $isActive) {
-                        StorageView(viewModel: viewModel.storageViewModel, isActive: $isActive)
-                    }
             }
         }
     }
@@ -108,7 +103,6 @@ struct StorageButtonView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView(viewModel: MainViewModel(service: JuiceService()))
+        MainView(viewModel: MainViewModel(service: JuiceService(), viewRouter: ViewRouter()), viewRoter: ViewRouter())
     }
 }
-
