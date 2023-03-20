@@ -23,7 +23,6 @@ struct JuiceMenuView: View {
             TabView(selection: $selected) {
                 ForEach($viewModel.juices.indices, id: \.self) { index in
                     CardView(juice: $viewModel.juices[index])
-                        .tag(index)
                 }
             }
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
