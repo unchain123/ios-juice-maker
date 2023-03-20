@@ -29,11 +29,11 @@ struct MainView: View {
             .indexViewStyle(.page)
             .frame(height: 400)
             MakeButtonView(viewModel: viewModel, selected: $selected)
-                .alert("\(viewModel.juiceType) 나왔습니다!", isPresented: $viewModel.isAlert, actions: {
+                .alert("\(viewModel.juices[selected].name) 나왔습니다!", isPresented: $viewModel.isAlert, actions: {
                     Button("잘 먹겠습니다", role: .none) {}
                 })
                 .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0))
-            StorageButtonView()
+            StorageButtonView(viewModel: viewModel)
                 .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0))
             Spacer()
         }
@@ -82,6 +82,7 @@ struct MakeButtonView: View {
 }
 
 struct StorageButtonView: View {
+    @ObservedObject var viewModel: MainViewModel
     @State var isActive: Bool = false
 
     var body: some View {
@@ -98,7 +99,7 @@ struct StorageButtonView: View {
                     .font(.caption)
                     .foregroundColor(Color.black)
                     .fullScreenCover(isPresented: $isActive) {
-                        StorageView(isActive: $isActive)
+                        StorageView(viewModel: viewModel.storageViewModel, isActive: $isActive)
                     }
             }
         }

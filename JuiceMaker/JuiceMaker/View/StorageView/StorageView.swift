@@ -8,54 +8,66 @@
 import SwiftUI
 
 struct StorageView: View {
-    @StateObject var viewModel = StorageViewModel(service: JuiceService())
+    @ObservedObject var viewModel: StorageViewModel
     @Binding var isActive: Bool
 
     var body: some View {
-        HStack {
-            Spacer()
+        VStack {
+            HStack {
+                Spacer()
 
-            Button(action: {
-                isActive.toggle()
-            }) {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 10)
-                        .foregroundColor(Color.red)
-                        .frame(width: 40, height: 40)
-                    RoundedRectangle(cornerRadius: 10)
-                        .foregroundColor(Color.white)
-                        .frame(width: 30, height: 30)
-                    Text("❌")
+                Button(action: {
+                    isActive.toggle()
+                }) {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 10)
+                            .foregroundColor(Color.red)
+                            .frame(width: 40, height: 40)
+                        RoundedRectangle(cornerRadius: 10)
+                            .foregroundColor(Color.white)
+                            .frame(width: 30, height: 30)
+                        Text("❌")
+                    }
+                }
+                Spacer()
+                Text("Juice Storage")
+                    .font(Font.custom("BMJUAOTF", size: 30))
+                    .bold()
+                    .foregroundColor(Color.black)
+                Spacer()
+                Button(action: {
+                    viewModel.saveStock()
+                }) {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 10)
+                            .foregroundColor(Color.blue)
+                            .frame(width: 40, height: 40)
+                        RoundedRectangle(cornerRadius: 10)
+                            .foregroundColor(Color.white)
+                            .frame(width: 30, height: 30)
+                        Text("저장")
+                            .font(Font.custom("BMJUAOTF", size: 15))
+                            .foregroundColor(Color.black)
+                            .frame(width: 40, height: 30, alignment: .center)
+                    }
+                }
+                Spacer()
+            }
+            ScrollView {
+                ForEach(viewModel.juiceStock.sorted(by: >), id: \.key) { fruit, _ in
+                    StockControlView(viewModel: viewModel.childrenVieModel[fruit] ??
+                                     StockControlViewModel(fruit: .apple, count: 0))
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .padding()
                 }
             }
-            Text("Juice Stroage")
-                .font(Font.custom("BMJUAOTF", size: 30))
-                .bold()
-                .foregroundColor(Color.black)
-
-
-            Button(action: {}) {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 10)
-                        .foregroundColor(Color.blue)
-                        .frame(width: 40, height: 40)
-                    RoundedRectangle(cornerRadius: 10)
-                        .foregroundColor(Color.white)
-                        .frame(width: 30, height: 30)
-                    Text("저장")
-                        .font(Font.custom("BMJUAOTF", size: 15))
-                        .foregroundColor(Color.black)
-                        .frame(width: 40, height: 30, alignment: .center)
-                }
-            }
-            Spacer()
+            .padding(EdgeInsets(top: 0, leading: 5, bottom: 0, trailing: 5))
         }
     }
 }
 
-//struct StorageView_Previews: PreviewProvider {
-//
-//    static var previews: some View {
-////        StorageView(viewModel: StorageViewModel(service: JuiceService()), isActive: true)
-//    }
-//}
+struct ContentView_Previews2: PreviewProvider {
+    static var previews: some View {
+        MainView(viewModel: MainViewModel(service: JuiceService()))
+    }
+}
