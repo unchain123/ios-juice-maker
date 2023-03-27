@@ -16,7 +16,6 @@
 		8F6A9B8728180D9300FCB772 /* FruitStoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6A9B8628180D9300FCB772 /* FruitStoreError.swift */; };
 		8F6A9B8928180E7600FCB772 /* Juice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6A9B8828180E7600FCB772 /* Juice.swift */; };
 		8F7E491329C4010900D259DF /* JuiceMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7E491229C4010900D259DF /* JuiceMenuView.swift */; };
-		8F7E493829C423F800D259DF /* JuiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7E493729C423F800D259DF /* JuiceViewModel.swift */; };
 		8F7E493B29C4261800D259DF /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7E493A29C4261800D259DF /* Recipe.swift */; };
 		8F7E494329C4433800D259DF /* JuiceServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7E494229C4433800D259DF /* JuiceServiceTests.swift */; };
 		8F7E494A29C4A38B00D259DF /* JuiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7E494929C4A38B00D259DF /* JuiceView.swift */; };
@@ -24,6 +23,7 @@
 		8F7E495329C6CEC400D259DF /* StorageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7E495229C6CEC400D259DF /* StorageViewModel.swift */; };
 		8F7E495629C6E87D00D259DF /* StockContolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7E495529C6E87D00D259DF /* StockContolView.swift */; };
 		8F7E495929C6E8C700D259DF /* StockControlViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7E495829C6E8C700D259DF /* StockControlViewModel.swift */; };
+		8F97F06E29D1BA590091ADC5 /* JuiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F97F06D29D1BA590091ADC5 /* JuiceViewModel.swift */; };
 		8FDAEF3929C82A84003215E2 /* JuiceMakerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDAEF3829C82A84003215E2 /* JuiceMakerUITests.swift */; };
 		8FDAEF3B29C82A84003215E2 /* JuiceMakerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDAEF3A29C82A84003215E2 /* JuiceMakerUITestsLaunchTests.swift */; };
 		C71CD66B266C7ACB0038B9CB /* JuiceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71CD66A266C7ACB0038B9CB /* JuiceService.swift */; };
@@ -59,7 +59,6 @@
 		8F6A9B8628180D9300FCB772 /* FruitStoreError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitStoreError.swift; sourceTree = "<group>"; };
 		8F6A9B8828180E7600FCB772 /* Juice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Juice.swift; sourceTree = "<group>"; };
 		8F7E491229C4010900D259DF /* JuiceMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuiceMenuView.swift; sourceTree = "<group>"; };
-		8F7E493729C423F800D259DF /* JuiceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JuiceViewModel.swift; path = ../../../../../../JuiceViewModel.swift; sourceTree = "<group>"; };
 		8F7E493A29C4261800D259DF /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		8F7E494029C4433700D259DF /* JuiceServiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JuiceServiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F7E494229C4433800D259DF /* JuiceServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuiceServiceTests.swift; sourceTree = "<group>"; };
@@ -70,6 +69,7 @@
 		8F7E495229C6CEC400D259DF /* StorageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageViewModel.swift; sourceTree = "<group>"; };
 		8F7E495529C6E87D00D259DF /* StockContolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockContolView.swift; sourceTree = "<group>"; };
 		8F7E495829C6E8C700D259DF /* StockControlViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockControlViewModel.swift; sourceTree = "<group>"; };
+		8F97F06D29D1BA590091ADC5 /* JuiceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuiceViewModel.swift; sourceTree = "<group>"; };
 		8FDAEF3629C82A84003215E2 /* JuiceMakerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JuiceMakerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FDAEF3829C82A84003215E2 /* JuiceMakerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuiceMakerUITests.swift; sourceTree = "<group>"; };
 		8FDAEF3A29C82A84003215E2 /* JuiceMakerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuiceMakerUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -150,7 +150,7 @@
 		8F7E493229C40D3F00D259DF /* Component */ = {
 			isa = PBXGroup;
 			children = (
-				8F7E493729C423F800D259DF /* JuiceViewModel.swift */,
+				8F97F06D29D1BA590091ADC5 /* JuiceViewModel.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -482,12 +482,12 @@
 				8F7E495029C6CC3A00D259DF /* StorageView.swift in Sources */,
 				8F7E493B29C4261800D259DF /* Recipe.swift in Sources */,
 				4D438928281809D1004E2BA2 /* Fruit.swift in Sources */,
+				8F97F06E29D1BA590091ADC5 /* JuiceViewModel.swift in Sources */,
 				8F7E495329C6CEC400D259DF /* StorageViewModel.swift in Sources */,
 				8F6A9B8728180D9300FCB772 /* FruitStoreError.swift in Sources */,
 				8F6A9B8928180E7600FCB772 /* Juice.swift in Sources */,
 				8F7E494A29C4A38B00D259DF /* JuiceView.swift in Sources */,
 				8F7E491329C4010900D259DF /* JuiceMenuView.swift in Sources */,
-				8F7E493829C423F800D259DF /* JuiceViewModel.swift in Sources */,
 				8F7E495629C6E87D00D259DF /* StockContolView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
