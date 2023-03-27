@@ -16,7 +16,7 @@
 
 | TapView| Storage | Alert |
 |:--------: | :--------: | :--------: |
-| <img src = "https://i.imgur.com/dR0DPYJ.gif" height=300, width= 300> | <img src = "https://i.imgur.com/RxLOknP.gif" height=300, width= 300> | <img src = "https://i.imgur.com/uDsN9Ro.gif" height=300, width= 300> |
+| <img src = "https://i.imgur.com/dR0DPYJ.gif" height=500, width= 300> | <img src = "https://i.imgur.com/RxLOknP.gif" height=500, width= 300> | <img src = "https://i.imgur.com/uDsN9Ro.gif" height=500, width= 300> |
 
 ## UITest, UnitTest
 | 테스트 설정|
